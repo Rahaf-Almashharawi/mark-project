@@ -35,10 +35,7 @@ function myFunction() {
 		return;
 	}
 
-	let num = [];
-	let totalMarks = 0;
-	let minMark = Infinity;
-	let maxMark = -Infinity;
+	let students = [];
 
 	for (let i = 0; i < +mynumber; i++) {
 		var name = prompt("Enter your name");
@@ -50,8 +47,23 @@ function myFunction() {
 			return;
 		}
 
+		let studentInfo = {
+			name: name,
+			exam: exam,
+			mark: mark,
+		};
+
+		students.push(studentInfo);
+	}
+
+	let totalMarks = 0;
+	let minMark = Infinity;
+	let maxMark = -Infinity;
+
+	for (let i = 0; i < students.length; i++) {
+		let mark = students[i].mark;
+
 		totalMarks += mark;
-		num.push(mark);
 
 		if (mark < minMark) {
 			minMark = mark;
@@ -79,11 +91,9 @@ function myFunction() {
 		grade = "F";
 	}
 
-	document.getElementById("demo4").innerHTML =
+	let result =
 		"My Number is: " +
 		mynumber +
-		"My Name is: " +
-		name +
 		" Average Grade: " +
 		grade +
 		" Average Mark: " +
@@ -92,6 +102,20 @@ function myFunction() {
 		minMark +
 		" Max Mark: " +
 		maxMark +
-		" Exam: " +
-		exam;
+		"<br>";
+
+	for (let i = 0; i < students.length; i++) {
+		result +=
+			"Student " +
+			(i + 1) +
+			": Name - " +
+			students[i].name +
+			", Exam - " +
+			students[i].exam +
+			", Mark - " +
+			students[i].mark +
+			"<br>";
+	}
+
+	document.getElementById("demo4").innerHTML = result;
 }
