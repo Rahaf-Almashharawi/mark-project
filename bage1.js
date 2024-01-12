@@ -14,7 +14,6 @@
 // console.log(" ما عنا فواكة بهيك سعر ي معلم");
 // };
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -35,7 +34,6 @@
 //     default:
 //         console.log("ما عنا شي يناسب حضرتك");
 // }
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,7 +59,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // switch("orang"){
 //     case 'Orang':
 //         console.log("Orang are $0.95 ");
@@ -78,7 +75,6 @@
 //             default:
 //                 console.log("لا يتوفر لدينا طلب لربما يكون الطلب بصل ي عسل")
 // }
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -151,7 +147,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // function myFunction() {
 //     var text;
 //     var fruits = document.getElementById("myInput").value;
@@ -172,10 +167,8 @@
 //     document.getElementById("demo2").innerHTML = text;
 //   }
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
-
 
 //   function myFunction() {
 //     var day;
@@ -207,7 +200,6 @@
 //     document.getElementById("demo3").innerHTML = "Today is " + day;
 //   }
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -225,8 +217,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
 // const number = prompt("Enter a number: ");
 
 // if (number > 0) {
@@ -238,7 +228,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // function myFunction() {
 //     let person = prompt("Please enter your Full name", "Harry Potter");
 //     if (person != null) {
@@ -249,7 +238,6 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // var userName = prompt("What is your name?");
 
@@ -275,10 +263,8 @@
 //     console.log("It's a cold day!");
 // }
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // function calculateTotal() {
 //     var sub1 = parseInt(document.getElementById("eng").value);
@@ -292,49 +278,45 @@
 //     }
 // }
 
-
-
-
 var textsArabic = {
-    Log_In: 'دخول',
-    Uneversity_Id: 'الرقم الجامعي',
-    password: 'كلمة المرور',
-    Request_password_by_email: 'طلب كلمة المرور عن طريق البريد الإلكتروني',
-    Request_password_by_smartphone: 'طلب كلمة المرور عن طريق الهاتف المحمول',
-    // hello: 'مرحبا',
-}
-
-var textsEnglish = {
-    Log_In: 'Log In',
-    Uneversity_Id: 'Uneversity ID',
-    password: 'Password',
-    Request_password_by_email: 'Request Password By Email',
-    Request_password_by_smartphone: 'Request Password By Smartphone',
-    // hello: 'hello',
+	Log_In: "دخول",
+	Uneversity_Id: "الرقم الجامعي",
+	password: "كلمة المرور",
+	Request_password_by_email: "طلب كلمة المرور عن طريق البريد الإلكتروني",
+	Request_password_by_smartphone: "طلب كلمة المرور عن طريق الهاتف المحمول",
+	// hello: 'مرحبا',
 };
 
-var currentLanguage = 'ar'; // يمكن تغيير القيمة إلى 'en' للإنجليزية
+var textsEnglish = {
+	Log_In: "Log In",
+	Uneversity_Id: "Uneversity ID",
+	password: "Password",
+	Request_password_by_email: "Request Password By Email",
+	Request_password_by_smartphone: "Request Password By Smartphone",
+	// hello: 'hello',
+};
+
+var currentLanguage = "ar"; // يمكن تغيير القيمة إلى 'en' للإنجليزية
 
 function switchLanguage(lang) {
-    if (lang === 'ar') {
-        currentLanguage = 'ar';
-        displayTexts(textsArabic);
-    } else {
-        currentLanguage = 'en';
-        displayTexts(textsEnglish);
-    }
+	if (lang === "ar") {
+		currentLanguage = "ar";
+		displayTexts(textsArabic);
+	} else {
+		currentLanguage = "en";
+		displayTexts(textsEnglish);
+	}
 }
 
 function displayTexts(texts) {
-    document.getElementById('welcomeText').innerHTML = `<p>${texts.Log_In}</p>`;
-    document.getElementById('Unevesity_ID').innerHTML = texts.Uneversity_Id;
-    document.getElementById('password').innerHTML = texts.password;
-    document.getElementById('linkB').innerHTML = texts.Request_password_by_email;
-    document.getElementById('linkC').innerHTML = texts.Request_password_by_smartphone;
-    document.getElementById('home').innerHTML = texts.home;
-    document.getElementById('hello').innerHTML = texts.hello;
-
+	document.getElementById("welcomeText").innerHTML = `<p>${texts.Log_In}</p>`;
+	document.getElementById("Unevesity_ID").innerHTML = texts.Uneversity_Id;
+	document.getElementById("password").innerHTML = texts.password;
+	document.getElementById("linkB").innerHTML = texts.Request_password_by_email;
+	document.getElementById("linkC").innerHTML =
+		texts.Request_password_by_smartphone;
+	document.getElementById("home").innerHTML = texts.home;
+	document.getElementById("hello").innerHTML = texts.hello;
 }
 
-switchLanguage(currentLanguage);//مافي داعي نحطها عادي لو شلناها عااااااادي 
-
+switchLanguage(currentLanguage); //مافي داعي نحطها عادي لو شلناها عااااااادي
