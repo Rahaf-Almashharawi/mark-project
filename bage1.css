@@ -61,17 +61,21 @@ body {
 }
 
 #welcomeText {
+    display: block;
+    margin: 0 80px;
+}
 
-    width: 150px;
-    height: 45px;
+#welcomeText>p {
+
+    padding: 20px;
     font-size: 19px;
     color: white;
-    border: none;
     font-weight: bolder;
-    border-radius: 5px;
+    /* border: 2px solid #0d71a4; */
     background-color: #0d71a4;
-    cursor: pointer;
-
+    /* cursor: pointer; */
+    /* text-align: center; */
+    margin: auto;
 }
 
 .linkA {

@@ -18,23 +18,23 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-var x = 6;
-switch (x) {
-    case 1:
-        console.log("car");
-        break;
-    case 2:
-        console.log("Laptop");
-        break;
-    case 3:
-        console.log("mobile");
-        break;
-    case 4:
-        console.log("van");
-        break;
-    default:
-        console.log("ما عنا شي يناسب حضرتك");
-}
+// var x = 6;
+// switch (x) {
+//     case 1:
+//         console.log("car");
+//         break;
+//     case 2:
+//         console.log("Laptop");
+//         break;
+//     case 3:
+//         console.log("mobile");
+//         break;
+//     case 4:
+//         console.log("van");
+//         break;
+//     default:
+//         console.log("ما عنا شي يناسب حضرتك");
+// }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -326,13 +326,13 @@ function switchLanguage(lang) {
 }
 
 function displayTexts(texts) {
-    document.getElementById('welcomeText').innerText = texts.Log_In;
-    document.getElementById('Unevesity_ID').innerText = texts.Uneversity_Id;
-    document.getElementById('password').innerText = texts.password;
-    document.getElementById('linkB').innerText = texts.Request_password_by_email;
-    document.getElementById('linkC').innerText = texts.Request_password_by_smartphone;
-    document.getElementById('home').innerText = texts.home;
-    document.getElementById('hello').innerText = texts.hello;
+    document.getElementById('welcomeText').innerHTML = `<p>${texts.Log_In}</p>`;
+    document.getElementById('Unevesity_ID').innerHTML = texts.Uneversity_Id;
+    document.getElementById('password').innerHTML = texts.password;
+    document.getElementById('linkB').innerHTML = texts.Request_password_by_email;
+    document.getElementById('linkC').innerHTML = texts.Request_password_by_smartphone;
+    document.getElementById('home').innerHTML = texts.home;
+    document.getElementById('hello').innerHTML = texts.hello;
 
 }
 
